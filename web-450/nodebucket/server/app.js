@@ -25,7 +25,7 @@ app.use('/', express.static(path.join(__dirname, '../dist/nodebucket')));
 const port = 3000; // server port
 
 // Personal connection string
-const conn = 'mongodb+srv://admin:5975@buwebdev-cluster-1.levpe.mongodb.net/test?authSource=admin&replicaSet=atlas-sc0j04-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true';
+const conn = 'mongodb+srv://admin:5975@buwebdev-cluster-1.levpe.mongodb.net/nodebucket?authSource=admin&replicaSet=atlas-sc0j04-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true';
 
 /**
  * Database connection

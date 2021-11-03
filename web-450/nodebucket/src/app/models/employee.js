@@ -8,4 +8,8 @@ let employeeSchema = new Schema({
   lastName: { type: String },
 }, { collection: 'employees'})
 
+console.log('is this working?');
+
 module.exports = mongoose.model('Employee', employeeSchema);
+
+console.log('what about this?');
