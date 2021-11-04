@@ -1,3 +1,14 @@
+/*
+=======================================================
+  Title: Nodebucket
+  Author: Professor Krasso
+  Date: 11/03/2021
+  Modified by: Sarah Jean Baptiste
+  Description: sign in component
+========================================================
+*/
+
+// import statements
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
@@ -24,6 +35,7 @@ export class SigninComponent implements OnInit {
     })
   }
 
+  // login function to reroute user or show error message
   login() {
     const empId = this.form.controls['empId'].value;
 

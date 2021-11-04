@@ -1,3 +1,14 @@
+/*
+=======================================================
+  Title: Nodebucket
+  Author: Professor Krasso
+  Date: 11/03/2021
+  Modified by: Sarah Jean Baptiste
+  Description: App.js
+========================================================
+*/
+
+// Import statments
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';

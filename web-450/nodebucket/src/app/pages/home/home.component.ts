@@ -1,3 +1,13 @@
+/*
+=======================================================
+  Title: Nodebucket
+  Author: Professor Krasso
+  Date: 11/03/2021
+  Modified by: Sarah Jean Baptiste
+  Description: Home Component
+========================================================
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({

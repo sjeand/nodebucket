@@ -1,3 +1,13 @@
+/*
+=======================================================
+  Title: Nodebucket
+  Author: Professor Krasso
+  Date: 11/03/2021
+  Modified by: Sarah Jean Baptiste
+  Description: baselayout
+========================================================
+*/
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,7 +18,7 @@ import { Component, OnInit } from '@angular/core';
 export class BaseLayoutComponent implements OnInit {
 
   year: number = Date.now();
-  
+
   constructor() { }
 
   ngOnInit(): void {

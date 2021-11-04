@@ -1,3 +1,14 @@
+/*
+=======================================================
+  Title: Nodebucket
+  Author: Professor Krasso
+  Date: 11/03/2021
+  Modified by: Sarah Jean Baptiste
+  Description: App Routing
+========================================================
+*/
+
+// Import statements
 import { HomeComponent } from './pages/home/home.component';
 import { BaseLayoutComponent } from './shared/base-layout/base-layout.component';
 import { NgModule } from '@angular/core';
@@ -6,6 +17,7 @@ import { AuthGuard } from './shared/auth.guard';
 import { AuthLayoutComponent } from './shared/auth-layout/auth-layout.component';
 import { SigninComponent } from './pages/signin/signin.component';
 
+// Routes
 const routes: Routes = [
   {
     path: '',
