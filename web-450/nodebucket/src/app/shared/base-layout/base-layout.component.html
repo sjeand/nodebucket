@@ -11,16 +11,35 @@
 <div fxLayout="column">
 
   <!-- navigation -->
-  <nav fxFlex>
+  <nav fxFlex style="box-shadow: 0 0 4px 0;">
     <mat-toolbar>
       <!-- navbar container -->
       <div class="navbar-container">
         <!-- logo -->
-        <button class="logo" routerLink="/" mat-button>nodebucket</button>
-
+        <button class="logo" routerLink="/" mat-button>Nodebucket</button>
         <button class="navbar-link" routerLink="/" mat-button>Home</button>
-        <button class="navbar-link" mat-button>About</button>
+        <button class="navbar-link"  mat-button>About Us</button>
+        <button class="navbar-link" routerLink="/contact" mat-button>Contact Us</button>
       </div>
+
+      <div fxFlex></div>
+
+      <!-- User icon with dropdown information on navbar -->
+      <div *ngIf="isLoggedIn">
+        <button mat-icon-button [matMenuTriggerFor]="profileMenu" aria-label="User profile menu">
+          <mat-icon>perm_identity</mat-icon>
+        </button>
+
+
+      <mat-menu #profileMenu>
+        <p style="padding: 10px;">Signed in as {{ this.name }}</p> <!--this is not displaying-->
+        <mat-divider></mat-divider>
+        <button mat-menu-item (click)="signOut()"> <!-- allows user to sign out and return to sign in page -->
+          <mat-icon>logout</mat-icon>
+          <span>Sign Out</span>
+        </button>
+      </mat-menu>
+    </div>
 
     </mat-toolbar>
   </nav>
@@ -34,10 +53,10 @@
 
   <!-- footer -->
   <div fxFlex>
-    <footer class="footer">
+    <footer class="footer" style="box-shadow: 0 0 4px 0;">
       <mat-toolbar class="footer-content">
         <p>
-         <!--&copy; {{year | date: 'yyyy'}} - nodebucket - <a href="https://www.bellevue.edu/" class="bu-link" target="_blank">Bellevue University</a>-->
+         &copy; {{year | date: 'yyyy'}} - nodebucket - <a href="https://www.bellevue.edu/" class="bu-link" target="_blank">Bellevue University</a>
         </p>
       </mat-toolbar>
     </footer>

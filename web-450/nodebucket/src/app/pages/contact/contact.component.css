@@ -1,0 +1,52 @@
+/*
+=======================================================
+  Title: Nodebucket
+  Author: Professor Krasso
+  Date: 11/03/2021
+  Modified by: Sarah Jean Baptiste
+  Description: contact component
+========================================================
+*/
+
+/* Welcome Styling */
+.main-welcome {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* title Styling */
+.title {
+  text-align: center;
+  font-size: 46px;
+  padding-top: 30px;
+  font-family: Garamond, serif;
+  margin-bottom: 20px;
+}
+
+/* Styling for both cards */
+.contact-container{
+  width: 80%;
+  margin: 0 auto;
+
+}
+
+/* Card Styling */
+.card{
+  background-color: whitesmoke;
+}
+
+/* text inside the Card Styling */
+.center-text{
+  text-align: center;
+  margin: 10px;
+  font-family: Garamond, serif;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* Icons in card Styling */
+.material-icons{
+  font-size: 40px;
+  color:dimgray;
+
+}

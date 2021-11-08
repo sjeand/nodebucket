@@ -33,6 +33,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { CookieService } from 'ngx-cookie-service';
+import { ContactComponent } from './pages/contact/contact.component';
+import { TaskService } from './task.service';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CreateTaskDialogComponent } from './shared/create-task-dialog/create-task-dialog.component';
 
 
 @NgModule({
@@ -42,6 +48,8 @@ import { CookieService } from 'ngx-cookie-service';
     BaseLayoutComponent,
     AuthLayoutComponent,
     SigninComponent,
+    ContactComponent,
+    CreateTaskDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,8 +67,12 @@ import { CookieService } from 'ngx-cookie-service';
     RouterModule,
     MatSelectModule,
     MatToolbarModule,
+    MatDialogModule,
+    MatDividerModule,
+    MatMenuModule
+
   ],
-  providers: [CookieService],
+  providers: [CookieService, TaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

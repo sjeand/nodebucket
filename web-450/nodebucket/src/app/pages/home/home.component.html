@@ -5,14 +5,92 @@
   Date: 11/03/2021
   Modified by: Sarah Jean Baptiste
   Description: Home component
+
 ========================================================
 -->
 
+<!--Main heading and subtitle -->
 <div fxLayout="column" class="main-welcome">
-    <h1 class="title">
-      Welcome to WEB 450's - nodebucket Project <br />
-      <span class="subtitle">
-        Pay close attention to the requirements, double and triple check the files for code attribution, and do not wait unitl the last minute to begin working on each item.
-      </span>
-    </h1>
+  <div fxFlex>
+    <div>
+        <h1 class="title">
+          Welcome Back {{ employee.firstName }} firstName!
+          <h2 class="subtitle">
+            Heres whats on your agenda today...
+          </h2>
+        </h1>
+    </div>
   </div>
+
+  <!--All other content -->
+  <div fxFlex>
+    <div fxLayout="row" fxLayoutGap="15px" class="task-container">
+
+      <!--ToDo card -->
+      <div fxFlex>
+        <mat-card class="mat-elevation-z0">
+          <mat-card-title class="lists">To-Do</mat-card-title>
+          <hr>
+          <mat-card-content>
+            <div class="task-column">
+              <div *ngFor="let item of todo">
+                <mat-card class="mat-elevation-z0 task-card">
+                  <mat-card-content>
+                    <div fxLayout="row">
+                      <div fxFlex>
+                        <ul style="list-style-type: square;">
+                          <li class="tasks">
+                            {{ item.text }}
+                          </li>
+                        </ul>
+
+                      </div>
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <!--Done Card -->
+      <div fxFlex>
+        <mat-card class="mat-elevation-z0">
+          <mat-card-title class="lists">Done</mat-card-title>
+          <hr>
+          <mat-card-content>
+            <div class="task-column">
+              <div *ngFor="let item of done">
+                <mat-card class="mat-elevation-z0 task-card">
+                  <mat-card-content>
+                    <div fxLayout="row">
+                      <div fxFlex>
+                        <ul style="list-style-type: square;">
+                          <li class="tasks">
+                            {{ item.text }}
+                          </li>
+                        </ul>
+
+                      </div>
+                    </div>
+                  </mat-card-content>
+                </mat-card>
+
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+
+  <!--Button to add task to ToDo list -->
+  <div fxFlex>
+    <div fxLayout="column" class="task-container">
+      <button class="add-task" mat-flat-button color="primary" (click)="openCreateTaskDialog()">Add an item to my to-do list</button>
+    </div>
+  </div>
+
+</div>

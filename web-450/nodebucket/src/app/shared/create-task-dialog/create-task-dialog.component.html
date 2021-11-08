@@ -1,0 +1,25 @@
+<!--
+=======================================================
+  Title: Nodebucket
+  Author: Professor Krasso
+  Date: 11/03/2021
+  Modified by: Sarah Jean Baptiste
+  Description: baselayout
+========================================================
+-->
+
+<!-- Add new task dialog-->
+<h2 mat-dialog-title>Add New Task</h2>
+
+<!-- form to allow user to enter task-->
+<mat-dialog-content [formGroup]="taskForm">
+  <mat-form-field style="width: 200px;">
+    <input type="text" placeholder="What do you need to do?..." matInput formControlName="text" (keydown.enter)="createTask()">
+  </mat-form-field>
+</mat-dialog-content>
+
+<!-- Button to create task and send to TODO list-->
+<mat-dialog-actions align="end">
+  <button mat-button (click)="cancel()">Cancel</button>
+  <button mat-button [disabled]="!taskForm.valid" (click)="createTask()">createTask</button>
+</mat-dialog-actions>

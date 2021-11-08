@@ -36,20 +36,25 @@ export class SigninComponent implements OnInit {
   }
 
   // login function to reroute user or show error message
-  login() {
+  login(): void {
     const empId = this.form.controls['empId'].value;
 
     this.http.get('/api/employees/' + empId).subscribe(res =>
     {
       if (res)
       {
-        this.cookieService.set('session_user', empId, 1);
+        console.log(res);
+
+        // Add first and last name to session storage
+        sessionStorage.setItem('name', `${res['firstName']} ${res['lastName']}`);
+
+        this.cookieService.set('session_user', empId, 1); // Get employee ID
 
         this.router.navigate(['/']);
       }
       else
       {
-        this.error = 'The employee ID you entered is not valid, please try again.'
+        this.error = 'The employee ID you entered is not valid, please try again.' // error to display when user enters invalid ID
       }
     })
   }

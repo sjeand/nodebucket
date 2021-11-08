@@ -1,14 +1,93 @@
+/*
+=======================================================
+  Title: Nodebucket
+  Author: Professor Krasso
+  Date: 11/03/2021
+  Modified by: Sarah Jean Baptiste
+  Description: home component
+========================================================
+*/
+
+/* Styling for main heading */
 .main-welcome {
     margin-top: 30px;
+    margin-bottom: 20px;
   }
-  
-  .title {
+
+/* Styling for title */
+.title {
+  text-align: center;
+  font-size: 46px;
+  padding-top: 30px;
+  font-family: Garamond, serif;
+  margin-bottom: 20px;
+}
+
+/* Styling for subtitle */
+.subtitle {
     text-align: center;
-    font-weight: lighter;
+    margin-top: 20px;
+    font-size: 28px;
+    font-family: 'Brush Script MT', cursive;
+    margin-bottom: 20px;
   }
-  
-  .subtitle {
+
+
+
+/* Card styling */
+
+/* Title */
+.mat-card-title{
+    font-size: 20px;
     text-align: center;
-    font-size: 14px;
   }
-  
+
+/* Container */
+.task-container{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+/* Task Column */
+.task-column{
+
+    min-height: 40px;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    display: block;
+}
+
+/* Cards */
+.task-card{
+  cursor: pointer;
+  padding: 20px 10px;
+  min-height: 40px;
+  height: 60px;
+  font-size: 24px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Garamond, serif;
+
+}
+
+/* Tasks */
+.tasks{
+  font-size: 20px;
+}
+
+/* List */
+.lists{
+  font-family: Garamond, serif;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
+/* Button Styling to add task */
+.add-task{
+  font-size: 20px;
+  font-family: Garamond, serif;
+  margin-top: 20px;
+}

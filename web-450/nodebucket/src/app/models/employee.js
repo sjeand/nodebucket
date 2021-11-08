@@ -10,16 +10,16 @@
 
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+const ItemDocument = require('./item');
 
 // Employee Schema
 let employeeSchema = new Schema({
-  empId: { type: String, unique: true, dropDups: true },
+  empId: { type: String, unique: true },
   firstName: { type: String },
   lastName: { type: String },
+  todo: [ ItemDocument ],
+  done: [ ItemDocument ],
 }, { collection: 'employees'})
-
-console.log('is this working?');
 
 module.exports = mongoose.model('Employee', employeeSchema);
 
-console.log('what about this?');
