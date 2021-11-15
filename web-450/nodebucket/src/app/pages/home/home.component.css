@@ -17,7 +17,7 @@
 /* Styling for title */
 .title {
   text-align: center;
-  font-size: 46px;
+  font-size: 50px;
   padding-top: 30px;
   font-family: Garamond, serif;
   margin-bottom: 20px;
@@ -27,7 +27,7 @@
 .subtitle {
     text-align: center;
     margin-top: 20px;
-    font-size: 28px;
+    font-size: 34px;
     font-family: 'Brush Script MT', cursive;
     margin-bottom: 20px;
   }
@@ -75,6 +75,7 @@
 /* Tasks */
 .tasks{
   font-size: 20px;
+  line-height: 1.5;
 }
 
 /* List */
@@ -82,6 +83,7 @@
   font-family: Garamond, serif;
   font-size: 24px;
   font-weight: bold;
+
 
 }
 
@@ -91,3 +93,5 @@
   font-family: Garamond, serif;
   margin-top: 20px;
 }
+
+

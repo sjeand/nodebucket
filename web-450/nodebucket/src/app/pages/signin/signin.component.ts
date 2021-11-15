@@ -46,9 +46,9 @@ export class SigninComponent implements OnInit {
         console.log(res);
 
         // Add first and last name to session storage
-        sessionStorage.setItem('name', `${res['firstName']} ${res['lastName']}`);
+        sessionStorage.setItem('name', `${res['firstname']} ${res['lastname']}`);
 
-        this.cookieService.set('session_user', empId, 1); // Get employee ID
+        this.cookieService.set('session_user', empId, 1); // set employee ID
 
         this.router.navigate(['/']);
       }

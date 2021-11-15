@@ -18,7 +18,7 @@
         <!-- logo -->
         <button class="logo" routerLink="/" mat-button>Nodebucket</button>
         <button class="navbar-link" routerLink="/" mat-button>Home</button>
-        <button class="navbar-link"  mat-button>About Us</button>
+        <button class="navbar-link"  routerLink="/about" mat-button>About Us</button>
         <button class="navbar-link" routerLink="/contact" mat-button>Contact Us</button>
       </div>
 
@@ -31,12 +31,12 @@
         </button>
 
 
-      <mat-menu #profileMenu>
-        <p style="padding: 10px;">Signed in as {{ this.name }}</p> <!--this is not displaying-->
+      <mat-menu #profileMenu >
+        <p class="profile" style="padding: 10px;">Signed in as <strong>{{ name }}</strong></p> <!--this is not displaying-->
         <mat-divider></mat-divider>
         <button mat-menu-item (click)="signOut()"> <!-- allows user to sign out and return to sign in page -->
           <mat-icon>logout</mat-icon>
-          <span>Sign Out</span>
+          <span class="profile">Sign Out</span>
         </button>
       </mat-menu>
     </div>
@@ -53,7 +53,7 @@
 
   <!-- footer -->
   <div fxFlex>
-    <footer class="footer" style="box-shadow: 0 0 4px 0;">
+    <footer class="footer" >
       <mat-toolbar class="footer-content">
         <p>
          &copy; {{year | date: 'yyyy'}} - nodebucket - <a href="https://www.bellevue.edu/" class="bu-link" target="_blank">Bellevue University</a>

@@ -21,10 +21,10 @@ import { CookieService } from 'ngx-cookie-service';
 export class BaseLayoutComponent implements OnInit {
 
   year: number = Date.now();
-  isLoggedIn: Boolean;
-  name: String;
+  isLoggedIn: boolean;
+  name: string;
 
-  // Show what user is signed in
+  // Show what user is
   constructor(private cookieService: CookieService, private router: Router) {
     this.isLoggedIn = this.cookieService.get('session_user') ? true:false;
     console.log('isLoggedIn' + this.isLoggedIn);

@@ -1,0 +1,52 @@
+/*
+=======================================================
+  Title: Nodebucket
+  Author: Professor Krasso
+  Date: 11/03/2021
+  Modified by: Sarah Jean Baptiste
+  Description: not found component
+========================================================
+*/
+
+
+/* Styling for main heading */
+.title {
+  text-align: center;
+  font-size: 46px;
+  padding-top: 30px;
+  font-family: Garamond, serif;
+  margin-bottom: 20px;
+}
+
+/* Styling for subtitle */
+.subtitle {
+  text-align: center;
+  font-size: 34px;
+  padding-top: 10px;
+  font-family: 'Brush Script MT', cursive;
+}
+.message{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 28px;
+  font-family: Garamond, serif;
+}
+
+/* Styling for button*/
+.button {
+  text-align: center;
+  font-size: 20px;
+  font-family: Garamond, serif;
+  width: 100%;
+  cursor: pointer;
+}
+
+
+/* Styling for card */
+.signin{
+  width: 60%;
+  margin: 10% auto;
+}
+
+
+
