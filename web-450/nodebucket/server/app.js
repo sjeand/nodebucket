@@ -30,10 +30,6 @@ app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, '../dist/nodebucket')));
 app.use('/', express.static(path.join(__dirname, '../dist/nodebucket')));
 
-/**
- * Variables
- */
-const port = process.env.PORT || 3000; // server port
 
 // Personal connection string
 const conn = 'mongodb+srv://admin:5975@buwebdev-cluster-1.levpe.mongodb.net/nodebucket?authSource=admin&replicaSet=atlas-sc0j04-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true';
@@ -287,6 +283,7 @@ app.delete('/api/employees/:empId/tasks/:taskId', async(req, res) => {
  * Create and start server
  */
 
-http.createServer(app).listen(port, function() {
-  console.log(`Application started and listening on port: ${port}`)
-}); // end http create server function
+app.listen(process.env.PORT || 3000, function(){
+  console.log("Application is running at localhost:" +
+  app.get('port'));
+})
