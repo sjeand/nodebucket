@@ -1,9 +1,6 @@
 {
   "name": "nodebucket",
-  "version": "0.0.0",
-  "engines": {
-    "node": "14.15.4"
-  },
+  "version": "14.15.4",
   "scripts": {
     "ng": "ng",
     "build": "ng build",
@@ -12,7 +9,7 @@
     "e2e": "ng e2e",
     "server": "nodemon ./server/app.js",
     "start": "ng serve",
-    "localhost": "ng build && node ./server/app.js"
+    "localhost": "ng build && node ./server/app.js",
   },
   "private": true,
   "dependencies": {
