@@ -286,10 +286,7 @@ app.delete('/api/employees/:empId/tasks/:taskId', async(req, res) => {
 /**
  * Create and start server
  */
-app.listen(process.env.PORT || 3000, function()){
-  console.log(`Application started and listening on port: ${port}`)
-}
 
-/* http.createServer(app).listen(port, function() {
+http.createServer(app).listen(port, function() {
   console.log(`Application started and listening on port: ${port}`)
-}); // end http create server function */
+}); // end http create server function
