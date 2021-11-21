@@ -18,6 +18,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const mongoose = require('mongoose');
 const Employee = require('../src/app/models/employee');
+const BaseResponse = require('../src/app/models/base-response');
 
 /**
  * App configurations
@@ -236,7 +237,7 @@ app.delete('/api/employees/:empId/tasks/:taskId', async(req, res) => {
               else {
                 console.log(updatedTodoItemEmployee);
 
-                const deleteTodoItemOnSuccessResponse = new BaseResponse('200', 'removed item from to do list');
+                const deleteTodoItemOnSuccessResponse = new BaseResponse('200', 'removed item from to do list', updatedTodoItemEmployee);
 
                 res.json(deleteTodoItemOnSuccessResponse.toObject());
               }
@@ -250,7 +251,7 @@ app.delete('/api/employees/:empId/tasks/:taskId', async(req, res) => {
 
                 const deleteDoneItemMongoErrorResponse = new BaseResponse('501', 'MongoDB server error', err);
 
-                res.status(501).send(deleteTodoItemMongoErrorResponse.toObject());
+                res.status(501).send(deleteDoneItemMongoErrorResponse.toObject());
 
               } else {
                 console.log(updatedDoneItemEmployee);
@@ -267,10 +268,10 @@ app.delete('/api/employees/:empId/tasks/:taskId', async(req, res) => {
 
             res.status(300).send(deleteTaskNotFoundResponse.toObject());
           }
-        }
 
-      })
-    }
+      }
+    })
+  }
     catch(e)
     {
       console.log(e);
@@ -279,13 +280,16 @@ app.delete('/api/employees/:empId/tasks/:taskId', async(req, res) => {
 
       res.status(500).send(deleteTaskCatchErrorResponse.toObject());
     }
-  })
-
+})
 
 
 /**
  * Create and start server
  */
-http.createServer(app).listen(port, function() {
+app.listen(process.env.PORT || 3000, function()){
   console.log(`Application started and listening on port: ${port}`)
-}); // end http create server function
+}
+
+/* http.createServer(app).listen(port, function() {
+  console.log(`Application started and listening on port: ${port}`)
+}); // end http create server function */

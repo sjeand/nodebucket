@@ -29,16 +29,14 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent implements OnInit {
 
   employee: Employee;
-  todo: Item[];
-  done: Item[];
   empId: number;
 
 
   constructor(private taskService: TaskService, private cookieService: CookieService, private dialog: MatDialog, private http: HttpClient) {
-    const empId = parseInt(this.cookieService.get('session_user'), 10);
+    this.empId = parseInt(this.cookieService.get('session_user'), 10);
 
     // Find all tasks based of employee id
-    this.taskService.findAllTasks(empId).subscribe(res => {
+    this.taskService.findAllTasks(this.empId).subscribe(res => {
       console.log('--server response from FindAllTasks--');
       console.log(res);
 
@@ -74,8 +72,6 @@ export class HomeComponent implements OnInit {
           console.log('--server error--');
           console.log(err);
         }, () => {
-          //this.todo = this.employee.todo;
-          //this.done = this.employee.done;
         }
         )
       }
@@ -90,7 +86,7 @@ export class HomeComponent implements OnInit {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
 
       console.log(`Reordered the existing list of task items`);
-      this.updateTaskList(this.empId, this.todo, this.done);
+      this.updateTaskList(this.empId, this.employee.todo, this.employee.done);
 
     } else {
       transferArrayItem(event.previousContainer.data,
@@ -99,20 +95,18 @@ export class HomeComponent implements OnInit {
                         event.currentIndex);
 
       console.log(`Moved task item to the container`);
-      this.updateTaskList(this.empId, this.todo, this.done);
+      this.updateTaskList(this.empId, this.employee.todo, this.employee.done);
     }
   }
 
   updateTaskList(empId: number, todo: Item[], done: Item[]): void {
-    const body = {todo: this.todo, done: this.done}
+    //const body = {todo: this.employee.todo, done: this.employee.done}
     this.taskService.updateTask(empId, todo, done).subscribe(res =>
       {
         this.employee = res.data;
       }, err => {
         console.log(err);
       }, () => {
-          this.todo = this.employee.todo
-          this.done = this.employee.done
         })
     }
 
@@ -127,8 +121,6 @@ export class HomeComponent implements OnInit {
         }, err => {
           console.log(err);
         }, () => {
-            this.todo = this.employee.todo
-            this.done = this.employee.done
           })
 
       }
@@ -138,10 +130,3 @@ export class HomeComponent implements OnInit {
 
 
 
-function deleteTask() {
-  throw new Error('Function not implemented.');
-}
-
-function taskId(taskId: any, string: any) {
-  throw new Error('Function not implemented.');
-} 

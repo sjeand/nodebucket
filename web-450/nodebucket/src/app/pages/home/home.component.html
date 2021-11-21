@@ -14,13 +14,18 @@
   <div fxFlex>
     <div>
         <h1 class="title">
-          <span *ngIf="employee">Welcome Back {{ employee.firstname }}!</span>
+          <span *ngIf="employee">Welcome Back {{ employee.firstname }} !</span>
+          <br/>
           <h2 class="subtitle">
-            Heres whats on your agenda today...
+            Here's what's on your agenda today...
           </h2>
+          <hr>
         </h1>
     </div>
   </div>
+
+  <br/>
+  <br/>
 
   <div *ngIf="!employee"></div>
   <!--All other content -->
@@ -29,7 +34,7 @@
 
       <!--ToDo card -->
       <div fxFlex>
-        <mat-card class="mat-elevation-z0">
+        <mat-card class="mat-elevation-z0 card">
           <mat-card-title class="lists">To-Do</mat-card-title>
           <hr>
           <mat-card-content>
@@ -38,7 +43,7 @@
             fxLayoutGap="10px"
             cdkDropList
             #todoList="cdkDropList"
-            [cdkDropListData]="todo"
+            [cdkDropListData]="employee.todo"
             [cdkDropListConnectedTo]="[doneList]"
             (cdkDropListDropped)="drop($event)">
 
@@ -69,7 +74,7 @@
 
       <!--Done Card -->
       <div fxFlex>
-        <mat-card class="mat-elevation-z0">
+        <mat-card class="mat-elevation-z0 card">
           <mat-card-title class="lists">Done</mat-card-title>
           <hr>
           <mat-card-content>
@@ -77,8 +82,8 @@
             fxLayout="column"
             fxLayoutGap="10px"
             cdkDropList
-            #todoList="cdkDropList"
-            [cdkDropListData]="done"
+            #doneList="cdkDropList"
+            [cdkDropListData]="employee.done"
             [cdkDropListConnectedTo]="[todoList]"
             (cdkDropListDropped)="drop($event)">
 
@@ -109,12 +114,14 @@
       </div>
     </div>
   </div>
-
+  <br/>
   <!--Button to add task to ToDo list -->
   <div fxFlex>
-    <div fxLayout="column" class="task-container">
-      <button class="add-task" mat-flat-button color="primary" (click)="openCreateTaskDialog()">Add an item to my to-do list</button>
+    <div fxLayout="column">
+      <button class="add-task" mat-flat-button (click)="openCreateTaskDialog()">Add an item to my to-do list</button>
     </div>
   </div>
 
 </div>
+
+

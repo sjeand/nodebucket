@@ -12,7 +12,9 @@
 <div fxLayout="column">
   <div fxFlex class="main-welcome">
     <h1 class="title">Contact Us</h1>
+    <hr>
   </div>
+  <br/>
 
 <!-- Main container-->
 <div fxFlex class="contact-container">
@@ -20,13 +22,16 @@
   <!-- Left hand card for navigation information-->
   <div fxLayout="row-wrap" fxLayoutGap="15px">
     <mat-card fxFlex class="card">
-      <mat-card-title class="mat-title-icon center-text">
-        <mat-icon>
-          <span class="material-icons">navigation</span>
-        </mat-icon>
-      </mat-card-title>
       <br/>
       <mat-card-content>
+        <img src="../../../assets/location.jpg" alt="Map" class="photo"/>
+        <a href="https://www.google.com/maps/" style="margin-left: 25%; font-family: Garamond, serif; color: dimgrey;">Google Maps</a>
+        <br/>
+        <p class="center-text">
+          <mat-icon>
+            <span class="material-icons">navigation</span>
+          </mat-icon>
+        </p>
         <p class="center-text">
         <strong>Nodebucket</strong> <br/>
           12345 Street St. <br/>
@@ -37,13 +42,16 @@
 
 <!-- Right hand card for phone information-->
     <mat-card fxFlex class="card">
-      <mat-card-title class="mat-title-icon center-text">
-        <mat-icon>
-          <span class="material-icons">phone</span>
-        </mat-icon>
-      </mat-card-title>
       <br/>
       <mat-card-content>
+        <img src="../../../assets/building.jpg" alt="Office Building" class="photo"/>
+        <a href="https://unsplash.com/photos/FFv-MNZty3Y" style="margin-left: 25%; font-family: Garamond, serif; color: dimgrey;">Unsplash</a>
+        <br/>
+        <p class="center-text">
+          <mat-icon>
+            <span class="material-icons">phone</span>
+          </mat-icon>
+        </p>
         <p class="center-text">
           <strong>Direct:</strong> 12354567 <br/>
           <strong>Toll Free:</strong> 1234567 <br/>
@@ -57,8 +65,9 @@
 
 <!-- Bottom div to display text-->
 <div fxFlex>
-  <p class="center-text">
-    Visit us online or at one of our many great locations!
+  <br/>
+  <p class="center-text" style="color: dimgray; letter-spacing: 1.5px;">
+    <strong>Visit us online or at one of our many great locations!</strong>
   </p>
 </div>
 </div>

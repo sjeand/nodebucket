@@ -50,3 +50,15 @@
   color:dimgray;
 
 }
+
+/* Styling for image */
+.photo{
+  width: 50%;
+  margin-right: 20px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  border: dimgray 4px solid;
+
+
+}

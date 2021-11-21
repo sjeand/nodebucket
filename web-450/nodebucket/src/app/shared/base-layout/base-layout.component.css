@@ -35,6 +35,7 @@
 /* Styling for main content */
 .main-content {
   padding-left: 30px;
+
 }
 
 /* Styling for footer */
@@ -43,6 +44,7 @@
   bottom: 0;
   width: 100%;
   box-shadow: 0 0 4px 0;
+
 }
 
 .footer-content {

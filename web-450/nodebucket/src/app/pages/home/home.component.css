@@ -17,19 +17,19 @@
 /* Styling for title */
 .title {
   text-align: center;
-  font-size: 50px;
+  font-size: 54px;
   padding-top: 30px;
   font-family: Garamond, serif;
-  margin-bottom: 20px;
 }
 
 /* Styling for subtitle */
 .subtitle {
     text-align: center;
-    margin-top: 20px;
-    font-size: 34px;
-    font-family: 'Brush Script MT', cursive;
+    font-size: 30px;
+    font-family: Garamond, serif;
+    letter-spacing: 3px;
     margin-bottom: 20px;
+    margin-top: 30px;
   }
 
 
@@ -44,16 +44,18 @@
 
 /* Container */
 .task-container{
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
+    background-color: whitesmoke;
+    border-radius: 10px;
+
   }
 
 /* Task Column */
 .task-column{
 
     min-height: 40px;
-    background-color: white;
-    border-radius: 4px;
+    background-color: whitesmoke;
     overflow: hidden;
     display: block;
 }
@@ -69,6 +71,8 @@
   justify-content: space-between;
   align-items: center;
   font-family: Garamond, serif;
+  background-color: whitesmoke;
+
 
 }
 
@@ -76,6 +80,9 @@
 .tasks{
   font-size: 20px;
   line-height: 1.5;
+  background-color: whitesmoke;
+
+
 }
 
 /* List */
@@ -83,6 +90,9 @@
   font-family: Garamond, serif;
   font-size: 24px;
   font-weight: bold;
+  line-height: 1.5;
+  padding: 2px;
+  background-color: whitesmoke;
 
 
 }
@@ -92,6 +102,13 @@
   font-size: 20px;
   font-family: Garamond, serif;
   margin-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+  background-color: whitesmoke;
+
 }
 
+.card{
+  background-color: whitesmoke;
 
+}

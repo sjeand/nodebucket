@@ -22,8 +22,6 @@
         <button class="navbar-link" routerLink="/contact" mat-button>Contact Us</button>
       </div>
 
-      <div fxFlex></div>
-
       <!-- User icon with dropdown information on navbar -->
       <div *ngIf="isLoggedIn">
         <button mat-icon-button [matMenuTriggerFor]="profileMenu" aria-label="User profile menu">
@@ -45,14 +43,14 @@
   </nav>
 
   <!-- main content -->
-  <div fxFlex>
+  <div fxFlex class="background">
     <main class="main-content" fxFlex="100%;">
       <router-outlet></router-outlet>
     </main>
   </div>
 
   <!-- footer -->
-  <div fxFlex>
+  <div fxFlex class="background">
     <footer class="footer" >
       <mat-toolbar class="footer-content">
         <p>

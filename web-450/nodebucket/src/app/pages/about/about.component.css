@@ -13,8 +13,10 @@
   font-size: 20px;
   line-height: 1.5;
   font-family: Garamond, serif;
-  width: 50%;
+  width: 54%;
   position: relative;
+  margin-left: 20px;
+
 }
 
 /* Styling for main heading */
@@ -34,11 +36,15 @@ margin-bottom: 20px;
 
 /* Styling for image */
 .photo{
+  width: 42%;
+  float: right;
   margin-right: 20px;
-  margin-bottom: 10px;
+  border: dimgray 4px solid;
+
 }
 
 /* Styling for card */
 .card{
   margin: 10px;
+  background-color: whitesmoke;
 }

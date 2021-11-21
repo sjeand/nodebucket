@@ -21,9 +21,10 @@
 /* Styling for subtitle */
 .subtitle {
   text-align: center;
-  font-size: 34px;
+  font-size: 28px;
   padding-top: 10px;
-  font-family: 'Brush Script MT', cursive;
+  font-family: Garamond, serif;
+  letter-spacing: 3px;
 }
 .message{
   text-align: center;
